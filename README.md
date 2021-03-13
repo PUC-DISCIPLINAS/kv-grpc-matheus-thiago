@@ -31,7 +31,7 @@ $ npm i
 
 ```bash
 # Executar o servidor
-$ node client.js
+$ node server.js
 ```
 
 Retorna que o servidor está pronto se a execução ocorrer com sucesso.
