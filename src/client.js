@@ -9,6 +9,11 @@ const commands = {
   PUT: "PUT",
 };
 
+const client = new kvPackage.KeyValue(
+  "localhost:50051",
+  grpc.credentials.createInsecure()
+);
+
 const help = () => {
   console.log("\nPlease, type a valid command\n");
   console.log(

@@ -13,10 +13,6 @@ message Key{
     string key = 1;
 }
 
-message Value{
-    string value = 1;
-}
-
 message Item {
     string key = 1;
     string value = 2;
