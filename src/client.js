@@ -30,7 +30,11 @@ const get = () => {
   const userKey = process.argv[3];
   if (userKey) {
     client.get({ key: userKey }, (err, response) => {
-      if (response) console.log("Item: ", response.value);
+      if (response) {
+        console.log("Item: ", response.value);
+      } else {
+        console.log("Couldn't find the key ", userKey);
+      }
     });
   } else {
     console.log("\nPlease, type a key to search");
