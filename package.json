@@ -1,0 +1,24 @@
+{
+  "name": "kv-store-grpc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PUC-DISCIPLINAS/kv-grpc-matheus-thiago.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PUC-DISCIPLINAS/kv-grpc-matheus-thiago/issues"
+  },
+  "homepage": "https://github.com/PUC-DISCIPLINAS/kv-grpc-matheus-thiago#readme",
+  "dependencies": {
+    "@grpc/proto-loader": "^0.5.6",
+    "grpc": "^1.24.6"
+  }
+}
