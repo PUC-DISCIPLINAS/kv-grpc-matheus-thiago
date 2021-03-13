@@ -26,6 +26,49 @@ const help = () => {
   );
 };
 
+const get = () => {
+  const userKey = process.argv[3];
+  if (userKey) {
+    client.get({ key: userKey }, (err, response) => {
+      if (response) console.log("Item: ", response.value);
+    });
+  } else {
+    console.log("\nPlease, type a key to search");
+  }
+};
+
+const put = () => {
+  const userKey = process.argv[3];
+  const userVal = process.argv[4];
+  if (userKey && userVal) {
+    client.put({ key: userKey, value: userVal }, (err, response) => {
+      if (response)
+        console.log(
+          "Item criado: { \nkey:",
+          response.key,
+          "\nvalue: ",
+          response.value,
+          "\n}"
+        );
+    });
+  } else {
+    console.log("\nPlease, type a key and a value to add");
+  }
+};
+
+const list = () => {
+  const call = client.getAllKeysStream();
+  call.on("data", (item) => {
+    console.log("item -> key: ", item.key, "\tvalue: ", item.value);
+  });
+  call.on("end", () => {
+    console.log("\n======= end =======\n");
+  });
+  call.on("error", () => {
+    console.log("Couldn't connect to server");
+  });
+};
+
 const main = () => {
   const command = process.argv[2];
   if (!command) {
@@ -33,13 +76,13 @@ const main = () => {
   } else {
     switch (command.toUpperCase()) {
       case commands.GET:
-        console.log("GET");
+        get();
         break;
       case commands.LIST:
-        console.log("LIST");
+        list();
         break;
       case commands.PUT:
-        console.log("PUT");
+        put();
         break;
       default:
         help();
