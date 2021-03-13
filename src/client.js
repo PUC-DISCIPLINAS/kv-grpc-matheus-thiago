@@ -48,12 +48,14 @@ const put = () => {
     client.put({ key: userKey, value: userVal }, (err, response) => {
       if (response)
         console.log(
-          "Item criado: { \nkey:",
+          "Item criado: { \n\tkey:",
           response.key,
-          "\nvalue: ",
+          "\n\tvalue: ",
           response.value,
           "\n}"
         );
+        else 
+          console.log("\n This key already exists, please try another one")       
     });
   } else {
     console.log("\nPlease, type a key and a value to add");
