@@ -21,7 +21,7 @@ As primitivas do Key-Value Store são:
 $ git clone https://github.com/PUC-DISCIPLINAS/kv-grpc-matheus-thiago.git
 
 # Entrar na pasta de código
-$ cd kv-store-grpc/src
+$ cd kv-grpc-matheus-thiago/src
 
 # Instalar dependências
 $ npm i
