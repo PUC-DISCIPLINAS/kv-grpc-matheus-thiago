@@ -31,7 +31,7 @@ $ npm i
 
 ```bash
 # Executar o servidor
-$ node client.js
+$ node server.js
 ```
 
 Retorna que o servidor está pronto se a execução ocorrer com sucesso.
@@ -82,3 +82,4 @@ $ node client.js list
 <hr>
 
 Todos os comandos *são case insensitive*, logo escrevê-los com letras maiúsculas ou minúsculas tem o mesmo resultado.
+
