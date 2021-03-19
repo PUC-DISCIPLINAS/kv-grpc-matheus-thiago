@@ -1,0 +1,19 @@
+syntax = "proto3";
+package kvPackage;
+
+service KeyValue{
+    rpc put(Item) returns (Item);
+    rpc get(Key) returns (Item);
+    rpc getAllKeysStream(noParam) returns (stream Item);
+}
+
+message noParam {}
+
+message Key{
+    string key = 1;
+}
+
+message Item {
+    string key = 1;
+    string value = 2;
+}
