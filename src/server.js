@@ -17,7 +17,7 @@ const main = () => {
       server.start();
     }
   );
-  console("GRPC server is running")
+  console.log("GRPC server is running")
 };
 
 const data = [];
