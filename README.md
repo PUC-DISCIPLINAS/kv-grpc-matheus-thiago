@@ -21,7 +21,7 @@ As primitivas do Key-Value Store são:
 $ git clone https://github.com/PUC-DISCIPLINAS/kv-grpc-matheus-thiago.git
 
 # Entrar na pasta de código
-$ cd kv-store-grpc/src
+$ cd kv-grpc-matheus-thiago/src
 
 # Instalar dependências
 $ npm i
@@ -31,7 +31,7 @@ $ npm i
 
 ```bash
 # Executar o servidor
-$ node client.js
+$ node server.js
 ```
 
 Retorna que o servidor está pronto se a execução ocorrer com sucesso.
@@ -82,3 +82,4 @@ $ node client.js list
 <hr>
 
 Todos os comandos *são case insensitive*, logo escrevê-los com letras maiúsculas ou minúsculas tem o mesmo resultado.
+
